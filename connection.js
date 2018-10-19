@@ -12,6 +12,7 @@ import {
     JitsiConnectionErrors,
     JitsiConnectionEvents
 } from './react/features/base/lib-jitsi-meet';
+import {setTileView} from './react/features/video-layout';
 
 const logger = require('jitsi-meet-logger').getLogger(__filename);
 
