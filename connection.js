@@ -134,6 +134,11 @@ function connect(id, password, roomName) {
         function handleConnectionEstablished() {
             APP.store.dispatch(connectionEstablished(connection, Date.now()));
             unsubscribe();
+            setTimeout(() => {
+                APP.UI.emitEvent('UI.nickname_changed', 'Hello 123');
+            }, 3000);
+            APP.UI.toggleChat();
+            APP.store.dispatch(setTileView(true));
             resolve(connection);
         }
 
